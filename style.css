@@ -1,0 +1,50 @@
+/* Base styles for body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    overflow: hidden; /* Hide scrollbars initially */
+    transition: overflow 0.5s ease-in-out; /* Smoothly show scrollbars */
+  }
+  
+  /* Welcome container styles */
+  #welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Welcome message styles */
+  #welcome {
+    font-size: 2em;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animate sliding and fading */
+    color: orangered
+  }
+  
+  /* Slide-up effect for the welcome message */
+  .slide-up {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  /* Additional content styles */
+  #additional-content {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animate sliding and fading */
+  }
+  
+  .show-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Ensure the body scrolls after the transition */
+  body.scrolled {
+    overflow: auto;
+  }
+  
